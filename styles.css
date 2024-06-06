@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-item a:hover {
+  background-color: #575757;
+  color: #ffeb3b;
+}
+
+.scrolled {
+  background-color: #222;
+  color: #ffeb3b;
+}
+
+.content {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px; /* Add space for the fixed navbar */
+  padding: 20px;
+}
+
+.message {
+  font-size: 32px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 2s ease-in-out forwards, grow 1s ease-in-out forwards;
+}
+
+.message .letter {
+  opacity: 0;
+  display: inline-block;
+  animation: fade-in 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

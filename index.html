@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Navigation Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#home" data-message="Welcome to the Home Page!">Home</a></li>
+      <li class="nav-item"><a href="#about" data-message="Learn more About Us!">About</a></li>
+      <li class="nav-item"><a href="#services" data-message="Check out our Services!">Services</a></li>
+      <li class="nav-item"><a href="#contact" data-message="Get in touch with us!">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div id="message" class="message"></div>
+    <!-- Content for different sections goes here -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
